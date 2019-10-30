@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2019_10_29_110817) do
   end
 
   create_table "chat_room_users", force: :cascade do |t|
+    t.integer "chat_room_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
